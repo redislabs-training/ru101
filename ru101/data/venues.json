@@ -1,0 +1,301 @@
+[
+{ 
+  "venue": "Olympic Stadium",
+  "zone": "Heritage",
+  "capacity": 60102,
+  "events": ["Athletics", "Football", "Opening Ceremony", "Closing Ceremony"],
+  "geo": {"long": 139.76632, "lat": 35.666754},
+  "transit": ["Toei Odeo Line", "Chuo Main Line"]
+},
+{
+  "venue": "Yoyogi National Gymnasium",
+  "zone": "Heritage",
+  "capacity": 13291,
+  "events": ["Handball"],
+  "geo": {"long": 139.699937, "lat": 35.667253},
+  "transit":["Chiyoda Line", "Fukutoshin Line", "Yamanote Line"]
+},
+{
+  "venue": "Tokyo Metropolitan Gymnasium",
+  "zone": "Heritage",
+  "capacity": 10000,
+  "events": ["Table tennis"],
+  "geo": {"long": 139.712531, "lat": 35.679753},
+  "transit":["Chuo-Sobu Line", "Oedo Line"]
+},
+{
+  "venue": "Nippon Budokan",
+  "zone": "Heritage",
+  "capacity": 14471,
+  "events": ["Judo", "Karate"],
+  "geo": {"long": 139.75, "lat": 35.693333},
+  "transit":["Toei Shinjuku Line", "Tozai Line", "Hanzomon Line"]
+},
+{
+  "venue": "Tokyo International Forum",
+  "zone": "Heritage",
+  "capacity": 5012,
+  "events": ["Weightlifting"],
+  "geo": {"long": 139.764300, "lat": 35.676657},
+  "transit":["Yamanote Line", "Keihin-Tohoku Line"]
+},
+{
+  "venue": "Imperial Palace Garden",
+  "zone": "Heritage",
+  "capacity": 5000,
+  "events": ["Cycling", "Marathon", "Race walk"],
+  "geo": {"long": 139.752800, "lat": 35.685175},
+  "transit":["Chiyoda Line", "Mita Line", "Tokyo Station", "Each Line", "Tozai Line"]
+},
+{
+  "venue": "Kokugikan Arena",
+  "zone": "Heritage",
+  "capacity": 11098,
+  "events": ["Boxing"],
+  "geo": {"long": 139.793286, "lat": 35.642328},
+  "transit":["Chuo-Sobu Line"]
+},
+{
+  "venue": "Kasai Rinkai Park",
+  "zone": "Tokyo Bay",
+  "capacity": 8000,
+  "events": ["Canoe", "Kayak"],
+  "geo": {"long": 139.860339, "lat": 35.648333},
+  "transit": ["Keiyo Line", "Musushino Line"]
+},
+{
+  "venue": "Seaside Park Hockey Stadium",
+  "zone": "Tokyo Bay",
+  "capacity": 10000,
+  "events": ["Field hockey"],
+  "geo": {"long": 139.752716, "lat": 35.594673},
+  "transit": ["Tokyo Monorail"]
+},
+{
+  "venue": "Olympic Aquatics Centre",
+  "zone": "Tokyo Bay",
+  "capacity": 18000,
+  "events": ["Swimming", "Diving","Synchronised swimming"],
+  "geo": {"long": 139.815139, "lat": 35.651411},
+  "transit": ["Yurakucho Line"]
+},
+{
+  "venue": "Tokyo Tatsumi International Swimming Center",
+  "zone": "Tokyo Bay",
+  "capacity": 5000,
+  "events": ["Water polo"],
+  "geo": {"long": 139.818943, "lat": 35.648532},
+  "transit": ["Keiyo Line", "Rinkai Line", "Yurakucho Line"]
+},
+{
+  "venue": "Yumenoshima Stadium",
+  "zone": "Tokyo Bay",
+  "capacity": 5050,
+  "events": ["Volleyball"],
+  "geo": {"long": 139.823626, "lat": 35.647668},
+  "transit": ["Keiyo Line", "Yurakucho Line"]
+},
+{
+  "venue": "Olympic BMX Course",
+  "zone": "Tokyo Bay",
+  "capacity": 6000,
+  "events": ["Cycling (BMX)", "Skateboarding"],
+  "transit": ["Rinkai Line"]
+},
+{
+  "venue": "Ariake Arena",
+  "zone": "Tokyo Bay",
+  "capacity": 12000,
+  "events": ["Archery"],
+  "geo": {"long": 139.794352, "lat": 35.642493},
+  "transit": ["Yurikamome Line"]
+},
+{
+  "venue": "Olympic Gymnastic Centre",
+  "zone": "Tokyo Bay",
+  "capacity": 12000,
+  "events": ["Gymnastics", "Trampoline"],
+  "transit": ["Rinkai Line"]
+},
+{
+  "venue": "Ariake Coliseum",
+  "zone": "Tokyo Bay",
+  "capacity": 20000,
+  "events": ["Tennis"],
+  "geo": {"long": 139.790164, "lat": 35.636406},
+  "transit": ["Yurikamome Line", "Rinkai Line"]
+},
+{
+  "venue": "Odaiba Marine Park",
+  "zone": "Tokyo Bay",
+  "capacity": 5000,
+  "events": ["Triathlon", "Aquatics"],
+  "geo": {"long": 139.773588, "lat": 35.628878},
+  "transit": ["Rinkai Line"]
+},
+{
+  "venue": "Shiokaze Park",
+  "zone": "Tokyo Bay",
+  "capacity": 12000,
+  "events": ["Beach Volleyball"],
+  "geo": {"long": 139.768796, "lat": 35.623980},
+  "transit": ["Yurikamome Line"]
+},
+{
+  "venue": "Central Breakwater",
+  "zone": "Tokyo Bay",
+  "capacity": 20000,
+  "events": ["Equestrian", "Rowing", "Kayak", "Canoe"]
+},
+{
+  "venue": "Aomi Urban Sports Venue",
+  "zone": "Tokyo Bay",
+  "capacity": 5000,
+  "events": ["3x3 Basketball", "Sport Climbing"]
+},
+{
+  "venue": "Camp Asaka",
+  "zone": "Other",
+  "events": ["Shooting"],
+  "geo": {"long": 139.600157, "lat": 35.784840}
+},
+{
+  "venue": "Musashino Forest Sport Centre",
+  "zone": "Other",
+  "capacity": 6000,
+  "events": ["Modern pentathlon", "Badminton"],
+  "geo": {"long": 139.524596, "lat": 35.666035},
+  "transit": ["Keio Line", "Selbu Tamagawa Line"]
+},
+{
+  "venue": "Ajinomoto Stadium",
+  "zone": "Other",
+  "capacity": 49970,
+  "events": ["Football", "Modern pentathlon", "Rugby sevens"],
+  "geo": {"long": 139.527151, "lat": 35.664270},
+  "transit": ["Keio Line", "Selbu Tamagawa Line"]
+},
+{
+  "venue": "Saitama Super Arena",
+  "zone": "Other",
+  "capacity": 22000,
+  "events": ["Basketball"],
+  "geo": {"long": 139.630732, "lat": 35.895081},
+  "transit": ["Takasaki Line", "Utsunomiya Line", "Keihin-Tohoku Line", "Saikyo Line"]
+},
+{
+  "venue": "Enoshima",
+  "zone": "Other",
+  "capacity": 10000,
+  "events": ["Sailing", "Surfing"],
+  "geo": {"long": 139.4810012, "lat": 35.301279},
+  "transit": ["Odakyu Enoshima Line", "Enoshima Electric Railway", "Shonan Monorail"]
+},
+{
+  "venue": "Makuhari Messe",
+  "zone": "Other",
+  "capacity": 6000,
+  "events": ["Fencing", "Taekwondo", "Wrestling"],
+  "geo": {"long": 140.034722, "lat": 35.648333},
+  "transit": ["Keiyo Line"]
+},
+{ 
+  "venue": "Baji Koen",
+  "zone": "Other",
+  "events": ["Equestrian"],
+  "geo": {"long": 139.632895, "lat": 35.639486},
+  "transit": ["Setagaya Line", "Denen-toshi Line", "Odakyu Line"]
+},
+{
+  "venue": "Kasumigaseki Country Club",
+  "zone": "Other",
+  "capacity": 30000,
+  "events": ["Golf"],
+  "geo": {"long": 139.404262, "lat": 35.901348}
+},
+{
+  "venue": "Izu Velodrome",
+  "zone": "Other",
+  "capacity": 5000,
+  "events": ["Cycling"],
+  "geo": {"long": 139.015259, "lat": 35.011554},
+  "transit": ["Sunzu Line"]
+},
+{
+  "venue": "Japan Cycle Sports Center",
+  "zone": "Other",
+  "events": ["Cycling"],
+  "geo": {"long": 139.010424, "lat": 35.009972},
+  "transit": ["Sunzu Line"]
+},
+{
+  "venue": "Yokohama Stadium",
+  "zone": "Other",
+  "capacity": 30000,
+  "events": ["Baseball", "Softball"],
+  "geo": {"long": 139.640072, "lat": 35.443311},
+  "transit": ["Blue Line", "Minatomirai Line"]
+},
+{
+  "venue": "Fukushima Azuma Baseball Stadium",
+  "zone": "Other",
+  "capacity": 30000,
+  "events": ["Baseball", "Softball"],
+  "geo": {"long": 140.363687, "lat": 37.721410},
+  "transit": ["Yamabiko", "Tsubasa", "Shinkansen"]
+},
+{
+  "venue": "International Stadium Yokohama",
+  "zone": "Other",
+  "capacity": 70000,
+  "events": ["Football"],
+  "geo": {"long": 139.606247, "lat": 35.510044},
+  "transit": ["Tokaido Shinkansen", "Yokohama Line", "Blue Line"]
+},
+{
+  "venue": "Saitama Stadium",
+  "zone": "Other",
+  "capacity": 62000,
+  "events": ["Football"],
+  "geo": {"long": 139.717597, "lat": 35.903134},
+  "transit": ["Saitama Rapid Railway Line"]
+},
+{
+  "venue": "Miyagi Stadium",
+  "zone": "Other",
+  "capacity": 48000,
+  "events": ["Football"],
+  "geo": {"long": 140.951789, "lat": 38.335451}
+},
+{
+  "venue": "Ajinomoto Stadium",
+  "zone": "Other",
+  "capacity": 49000,
+  "events": ["Football"],
+  "geo": {"long": 139.527151, "lat": 35.664270},
+  "transit": ["Keio Line", "Seibu Tamagawa Line"]
+},
+{
+  "venue": "Kashima Soccer Stadium",
+  "zone": "Other",
+  "capacity": 42000,
+  "events": ["Football"],
+  "geo": {"long": 140.640331, "lat": 35.991993},
+  "transit": ["Kashima Line"]
+},
+{
+  "venue": "Sapporo Dome",
+  "zone": "Other",
+  "capacity": 42000,
+  "events": ["Football"],
+  "geo": {"long": 141.409529, "lat": 43.015775},
+  "transit": ["Toho Line"]
+},
+{
+  "venue": "National Stadium",
+  "zone": "Other",
+  "capacity": 42000,
+  "events": ["Football"],
+  "geo": {"long": 139.714894, "lat": 35.678093}
+}
+]
