@@ -9,7 +9,7 @@ import redisu.utils.keynamehelper as keynamehelper
 
 def clean_keys(redis_c, prefix=None):
   """Remove keys with a given prefix. Stop if the default prefix would result in
-  removing all keys. This is used by the various use cases to clean up there
+  removing all keys. This is used by the various use cases to clean up their
   tets data before running again."""
   key_prefix = prefix if prefix != None else keynamehelper.get_prefix()
   count = 0
@@ -19,7 +19,7 @@ def clean_keys(redis_c, prefix=None):
       redis_c.delete(k)
       count += 1
   else:
-    print("No prefix, no way am I goig to remove '*' !")
+    print("No prefix, no way am I going to remove '*' !")
   return count
 
 def main(prefix):
