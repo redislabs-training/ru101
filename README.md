@@ -48,6 +48,7 @@ $ export REDIS_PASSWORD=ssssh
 To answer some of the homework and exam questions, and run the sample code, you'll need to load the sample data into Redis:
 
 ```bash
+$ cd redisu
 $ python utils/dumpload.py load ru101/data/ru101.json
 ```
 
@@ -64,7 +65,7 @@ To run the example code, `cd` to the directory containing the script you wish to
 Example:
 
 ```bash
-$ cd redusu/ru101/uc01-faceted-search
+$ cd redisu/ru101/uc01-faceted-search
 $ python search.py
 ```
 
