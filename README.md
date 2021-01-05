@@ -47,17 +47,17 @@ $ export REDIS_PASSWORD=ssssh
 
 Running the Redis server and the Python code on different machines introduces round trip network latency for each Redis command sent from Python to Redis. To keep the example code simple, some of the Python scripts for this course send each command to Redis separately. 
 
-To get the most performance from applications using Redis, we recommend the use of [pipelining](https://redis.io/topics/pipelining) to send multiple commands to the server in a single round trip. You should also ensure that the application code and Redis server are on hosts with minimal latency between them. These concepts are covered in more detail in the following programming language specific Redis University courses:
+To get the most performance from applications using Redis, we recommend the use of [pipelining](https://redis.io/topics/pipelining) to send multiple commands to the server in a single round trip where possible. You should also ensure that the application code and Redis server are on hosts with minimal latency between them. These concepts are covered in more detail in the following programming language specific Redis University courses:
 
 * [RU102J Redis for Java Developers](https://university.redislabs.com/courses/ru102j/)
 * [RU102JS Redis for JavaScript Developers](https://university.redislabs.com/courses/ru102js/)
 * [RU102PY Redis for Python Developers](https://university.redislabs.com/courses/ru102py/)
 
-To get the best perofrmance from the simple demo scripts for this course, you should run the code and the Redis server on the same local network or the same machine if possible.
+To get the best performance from the simple demo scripts for this course, you should run the code and the Redis server on the same local network or the same machine if possible.
 
 ### Loading the Sample Data
 
-To answer some of the homework and exam questions, and run the sample code, you'll need to load the sample data into Redis:
+To answer some of the homework and exam questions, and to run the sample code, you'll need to load the sample data into Redis:
 
 ```bash
 $ cd redisu
@@ -69,6 +69,25 @@ If the sample data was loaded correctly, you should see the following message:
 ```
 total keys loaded: 14328
 ```
+
+### Using redis-cli
+
+Some of the quiz, homework and exam questions for this course may require you to use the Redis command line interface to execute commands.  Start redis-cli from the command line as follows:
+
+```bash
+$ redis-cli
+127.0.0.1:6379>
+```
+
+You can then enter Redis commands, for example to see how many keys are in the database use `dbsize`:
+
+```bash
+127.0.0.1:6379> dbsize
+(integer) 14328
+127.0.0.1:6379>
+```
+
+If you prefer a more graphical user interface, try [RedisInsight](https://redislabs.com/redis-enterprise/redis-insight/), a free tool for exploring and interacting with Redis that includes an embedded redis-cli.
 
 ### Running the Code
 
