@@ -43,7 +43,19 @@ $ export REDIS_PORT=9999
 $ export REDIS_PASSWORD=ssssh
 ```
 
-### Loading Sample Data
+### Network Latency
+
+Running the Redis server and the Python code on different machines introduces round trip network latency for each Redis command sent from Python to Redis. To keep the example code simple, some of the Python scripts for this course send each command to Redis separately. 
+
+To get the most performance from applications using Redis, we recommend the use of [pipelining](https://redis.io/topics/pipelining) to send multiple commands to the server in a single round trip. You should also ensure that the application code and Redis server are on hosts with minimal latency between them. These concepts are covered in more detail in the following programming language specific Redis University courses:
+
+* [RU102J Redis for Java Developers](https://university.redislabs.com/courses/ru102j/)
+* [RU102JS Redis for JavaScript Developers](https://university.redislabs.com/courses/ru102js/)
+* [RU102PY Redis for Python Developers](https://university.redislabs.com/courses/ru102py/)
+
+To get the best perofrmance from the simple demo scripts for this course, you should run the code and the Redis server on the same local network or the same machine if possible.
+
+### Loading the Sample Data
 
 To answer some of the homework and exam questions, and run the sample code, you'll need to load the sample data into Redis:
 
@@ -71,4 +83,4 @@ $ python search.py
 
 ### Need Help or Have Questions?
 
-If you need help, have questions, or want to chat about all things Redis, please join us on the [Redis Universiry Discord Server](https://discord.gg/PxxqQg5).
+If you need help, have questions, or want to chat about all things Redis, please join us on the [Redis University Discord Server](https://discord.gg/PxxqQg5).
