@@ -103,3 +103,7 @@ $ python search.py
 ### Need Help or Have Questions?
 
 If you need help, have questions, or want to chat about all things Redis, please join us on the [Redis University Discord Server](https://discord.gg/PxxqQg5).
+
+### Subscribe to our YouTube Channel
+
+We'd love for you to [check out our YouTube channel](https://youtube.com/redislabs), and subscribe if you want to see more Redis videos!
