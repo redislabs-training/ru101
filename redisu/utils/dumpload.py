@@ -106,13 +106,23 @@ def load(redis, filename="/data/ru101.json", compress=False):
     filen.close()
     print("total keys loaded: {}".format(count))
 
-def main(command, datafile):
+def main(command, datafile, tls_string):
   """Entry point to execute either the dump or load"""
   import os
+
+  # Supoort for client certs is missing. This works only for
+  # SSL enabled servers that do not require client certs.
+  ssl=False
+  ssl_cert_reqs='required'
+  if tls_string == '--tls':
+      print("using tls")
+      ssl=True
+      ssl_cert_reqs=None
+
   redis_c = StrictRedis(host=os.environ.get("REDIS_HOST", "localhost"),
                         port=os.environ.get("REDIS_PORT", 6379),
                         password=os.environ.get("REDIS_PASSWORD", None),
-                        db=0)
+                        db=0, ssl=ssl, ssl_cert_reqs=ssl_cert_reqs)
   if command == "load":
     load(redis_c, filename=datafile)
   elif command == "dump":
@@ -121,4 +131,4 @@ def main(command, datafile):
     print("Don't know how to do {}".format(command))
 
 if __name__ == "__main__":
-  main(sys.argv[1], sys.argv[2])
+  main(sys.argv[1], sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else None)
