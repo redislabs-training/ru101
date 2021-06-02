@@ -61,7 +61,7 @@ To answer some of the homework and exam questions, and to run the sample code, y
 
 ```bash
 $ cd redisu
-$ python utils/dumpload.py load ru101/data/ru101.json
+$ python utils/dumpload.py load ru101/data/ru101.json # `--tls` optional
 ```
 
 If the sample data was loaded correctly, you should see the following message:
