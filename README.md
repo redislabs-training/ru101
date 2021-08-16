@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repo contains the sample data and Python code for [RU101, Introduction to Redis Data Structures](https://university.redislabs.com/courses/ru101/) at [Redis University](https://university.redislabs.com/).
+This repo contains the sample data and Python code for [RU101, Introduction to Redis Data Structures](https://university.redis.com/courses/ru101/) at [Redis University](https://university.redis.com/).
 
 ## Setup
 
@@ -15,7 +15,7 @@ There are multiple ways that you can install Redis, options include:
 * [Download the source code](https://redis.io/download) and build Redis from source.
 * Use the [Redis container from Docker Hub](https://hub.docker.com/_/redis/).
 * Mac OS users can install Redis using the [Homebrew Package Manager](https://brew.sh/).
-* Windows 10 users can install Redis using WSL 2.  This [blog post](https://redislabs.com/blog/redis-on-windows-10/) provides guidance for this.
+* Windows 10 users can install Redis using WSL 2.  This [blog post](https://redis.com/blog/redis-on-windows-10/) provides guidance for this.
 * Debian and Ubuntu users can install Redis using the apt package manager - look for the `redis-server` package.
 
 You should install the latest Redis 6 release if possible.  If you're unable to use Redis 6, make sure to install Redis 5.0.3 or higher.
@@ -49,9 +49,9 @@ Running the Redis server and the Python code on different machines introduces ro
 
 To get the most performance from applications using Redis, we recommend the use of [pipelining](https://redis.io/topics/pipelining) to send multiple commands to the server in a single round trip where possible. You should also ensure that the application code and Redis server are on hosts with minimal latency between them. These concepts are covered in more detail in the following programming language specific Redis University courses:
 
-* [RU102J Redis for Java Developers](https://university.redislabs.com/courses/ru102j/)
-* [RU102JS Redis for JavaScript Developers](https://university.redislabs.com/courses/ru102js/)
-* [RU102PY Redis for Python Developers](https://university.redislabs.com/courses/ru102py/)
+* [RU102J Redis for Java Developers](https://university.redis.com/courses/ru102j/)
+* [RU102JS Redis for JavaScript Developers](https://university.redis.com/courses/ru102js/)
+* [RU102PY Redis for Python Developers](https://university.redis.com/courses/ru102py/)
 
 To get the best performance from the simple demo scripts for this course, you should run the code and the Redis server on the same local network or the same machine if possible.
 
@@ -87,7 +87,7 @@ You can then enter Redis commands, for example to see how many keys are in the d
 127.0.0.1:6379>
 ```
 
-If you prefer a more graphical user interface, try [RedisInsight](https://redislabs.com/redis-enterprise/redis-insight/), a free tool for exploring and interacting with Redis that includes an embedded redis-cli.
+If you prefer a more graphical user interface, try [RedisInsight](https://redis.com/redis-enterprise/redis-insight/), a free tool for exploring and interacting with Redis that includes an embedded redis-cli.
 
 ### Running the Code
 
@@ -106,4 +106,4 @@ If you need help, have questions, or want to chat about all things Redis, please
 
 ### Subscribe to our YouTube Channel
 
-We'd love for you to [check out our YouTube channel](https://youtube.com/redislabs), and subscribe if you want to see more Redis videos!
+We'd love for you to [check out our YouTube channel](https://youtube.com/redisinc), and subscribe if you want to see more Redis videos!
