@@ -18,7 +18,7 @@ There are multiple ways that you can install Redis, options include:
 * Windows 10 users can install Redis using WSL 2.  [This video shows you how](https://www.youtube.com/watch?v=_nFwPTHOMIY), and this [blog post](https://redis.com/blog/redis-on-windows-10/) provides additional guidance.
 * Debian and Ubuntu users can install Redis using the apt package manager - look for the `redis-server` package.
 
-You should install the latest Redis 6 release if possible.  If you're unable to use Redis 6, make sure to install Redis 5.0.3 or higher.
+You should install the latest Redis 7 release if possible.  If you're unable to use Redis 7, make sure to install Redis 5.0.3 or higher.
 
 ### Python
 
