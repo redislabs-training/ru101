@@ -21,7 +21,7 @@ def order_id():
                           __fake__.pystr(min_chars=6, max_chars=6)).upper()
 
 def random_time_today():
-  """Gnerate a random time during the current day"""
+  """Generate a random time during the current day"""
   from random import uniform
   from time import mktime
   import datetime
