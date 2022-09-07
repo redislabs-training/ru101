@@ -17,7 +17,7 @@
 - Sets
 - Sorted Sets
 
-[Anotations](week1/week1.md)
+[Week 1 annotations](week1/week1.md)
 
 
 ### Week 2 
@@ -27,5 +27,12 @@
 - Hashing index
 - Big-O
 
-[Week 2](week2/week2.md)
+[Week 2 abbitations](week2/week2.md)
+
+
+### Week 3  
+- Transactions
+- Objects Storage with hashes
+
+[Week 3 annotations](week3/week3.md)
 
