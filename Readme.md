@@ -19,3 +19,13 @@
 
 [Anotations](week1/week1.md)
 
+
+### Week 2 
+
+- Objects inspection
+- Set intersection (Faceted search)
+- Hashing index
+- Big-O
+
+[Week 2](week2/week2.md)
+
