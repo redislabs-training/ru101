@@ -75,7 +75,7 @@ def listener_sales_analytics(channel):
     redis.execute_command("BITFIELD", tod_event_hist_key, *vals)
 
 def print_statistics(stop_event):
-  """Thread that prints current event statsistics."""
+  """Thread that prints current event statistics."""
   from binascii import hexlify
   sum_key = keynamehelper.create_key_name("sales_summary")
   print("\n === START")
