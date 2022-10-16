@@ -137,7 +137,7 @@ def test_pub_sub():
 # Part Two - pattern subscriptions
 
 # Subscribe for 'Opening Ceremony' events, pick every 5th purchase as the
-# lottry winner
+# lottery winner
 def listener_ceremony_alerter(channel):
   """Listener that looks for either 'Opening Ceremony' or 'Closing Ceremony'
   events only. If then tracks a Lottery content, award a prize for every 5th
