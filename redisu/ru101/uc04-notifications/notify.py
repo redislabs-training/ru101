@@ -75,7 +75,7 @@ def listener_sales_analytics(channel):
     redis.execute_command("BITFIELD", tod_event_hist_key, *vals)
 
 def print_statistics(stop_event):
-  """Thread that prints current event statsistics."""
+  """Thread that prints current event statistics."""
   from binascii import hexlify
   sum_key = keynamehelper.create_key_name("sales_summary")
   print("\n === START")
@@ -137,7 +137,7 @@ def test_pub_sub():
 # Part Two - pattern subscriptions
 
 # Subscribe for 'Opening Ceremony' events, pick every 5th purchase as the
-# lottry winner
+# lottery winner
 def listener_ceremony_alerter(channel):
   """Listener that looks for either 'Opening Ceremony' or 'Closing Ceremony'
   events only. If then tracks a Lottery content, award a prize for every 5th
