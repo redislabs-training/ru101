@@ -12,6 +12,7 @@ You'll need to clone this repository to your machine, and setup Redis and Python
 
 There are multiple ways that you can install Redis, options include:
 
+* Use a free Redis instance in the cloud - see the "Setup" page in the course materials when logged in to Redis University.
 * [Download the source code](https://redis.io/download) and build Redis from source.
 * Use the [Redis container from Docker Hub](https://hub.docker.com/_/redis/).
 * Mac OS users can install Redis using the [Homebrew Package Manager](https://brew.sh/).
