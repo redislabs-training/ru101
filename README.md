@@ -6,20 +6,15 @@ This repo contains the sample data and Python code for [RU101, Introduction to R
 
 ## Setup
 
-You'll need to clone this repository to your machine, and setup Redis and Python as described below.
+Redis Stack is an easy to install bundle of Redis plus additional capabilities.  You'll need to clone this repository to your machine, and setup Redis Stack and Python as described below. Read more about Redis Stack [here](https://redis.io/docs/stack/get-started/).
 
-### Redis
+### Redis Stack
 
-There are multiple ways that you can install Redis, options include:
+There are multiple ways that you can install Redis Stack, options include:
 
-* Use a free Redis instance in the cloud - see the "Setup" page in the course materials when logged in to Redis University.
-* [Download the source code](https://redis.io/download) and build Redis from source.
-* Use the [Redis container from Docker Hub](https://hub.docker.com/_/redis/).
-* Mac OS users can install Redis using the [Homebrew Package Manager](https://brew.sh/).
-* Windows 10 users can install Redis using WSL 2.  [This video shows you how](https://www.youtube.com/watch?v=_nFwPTHOMIY), and this [blog post](https://redis.com/blog/redis-on-windows-10/) provides additional guidance.
-* Debian and Ubuntu users can install Redis using the apt package manager - look for the `redis-server` package.
-
-You should install the latest Redis 7 release if possible.  If you're unable to use Redis 7, make sure to install Redis 5.0.3 or higher.
+* Use a free Redis Stack instance in the cloud - see the "Setup" page in the course materials when logged in to Redis University.
+* Use the [Redis Stack container from Docker Hub](https://hub.docker.com/r/redis/redis-stack).
+* If you want to install Redis Stack directly on your machine, it's available via popular package managers for different operating systems.  [Follow the installation instructions here](https://redis.io/docs/stack/get-started/install/).
 
 ### Python
 
@@ -53,12 +48,15 @@ To get the most performance from applications using Redis, we recommend the use 
 * [RU102J Redis for Java Developers](https://university.redis.com/courses/ru102j/)
 * [RU102JS Redis for JavaScript Developers](https://university.redis.com/courses/ru102js/)
 * [RU102PY Redis for Python Developers](https://university.redis.com/courses/ru102py/)
+* [RU102N Redis for .NET Developers](https://university.redis.com/courses/ru102n/)
 
 To get the best performance from the simple demo scripts for this course, you should run the code and the Redis server on the same local network or the same machine if possible.
 
 ### Loading the Sample Data
 
-To answer some of the homework and exam questions, and to run the sample code, you'll need to load the sample data into Redis:
+To answer some of the homework and exam questions, and to run the sample code, you'll need to load the sample data into Redis.  Skip this step if you chose to use a Cloud Redis Stack instance as you will have loaded the data as part of the database setup.
+
+If you're running Redis Stack locally or via Docker, go ahead and load the data as follows:
 
 ```bash
 $ cd redisu
