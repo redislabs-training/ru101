@@ -50,7 +50,7 @@ def match_by_inspection(*keys):
   attributes."""
   matches = []
   key = keynamehelper.create_key_name("event", "*")
-  for key in redis.scan_iter(key):
+  for key in redis.scan_iter(match=key, count=1000):
     match = False
     event = json.loads(redis.get(key))
     for keyval in keys:
@@ -162,7 +162,7 @@ def match_by_hashed_faceting(*keys):
       hfs.append(key[0])
   hashed_val = hashlib.sha256(str(hfs).encode('utf-8')).hexdigest()
   hashed_key = keynamehelper.create_key_name("hfs", hashed_val)
-  for found_key in redis.sscan_iter(hashed_key):
+  for found_key in redis.sscan_iter(hashed_key, count=1000):
     matches.append(found_key)
   return matches
 

@@ -33,7 +33,7 @@ def get_event_seat_block(event_sku, tier, block_name):
 def print_event_seat_map(event_sku, tier="*"):
   """Format the seat map for display purposes."""
   key = keynamehelper.create_key_name("seatmap", event_sku, tier, "*")
-  for block in redis.scan_iter(key):
+  for block in redis.scan_iter(match=key, count=1000):
     (_, tier_name, block_name) = block.rsplit(":", 2)
     seat_map = get_event_seat_block(event_sku, tier_name, block_name)
     print(("{:40s} ").format(block), end=' ')
@@ -69,7 +69,7 @@ def find_seat_selection(event_sku, tier, seats_required):
   # Get all the seat rows
   seats = []
   key = keynamehelper.create_key_name("seatmap", event_sku, tier, "*")
-  for block in redis.scan_iter(key):
+  for block in redis.scan_iter(match=key, count=1000):
     # Find if there are enough seats in the row, before checking if they
     # are contiguous
     if redis.bitcount(block) >= seats_required:

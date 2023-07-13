@@ -242,7 +242,7 @@ def expire_reservation(event_sku, cutoff_time_secs=30):
 backout the reservation and return the inventory back to the pool."""
   cutoff_ts = int(time.time()-cutoff_time_secs)
   e_key = keynamehelper.create_key_name("ticket_hold", event_sku)
-  for field in redis.hscan_iter(e_key, match="ts:*"):
+  for field in redis.hscan_iter(e_key, match="ts:*", count=1000):
     if int(field[1]) < cutoff_ts:
       (_, order_id) = field[0].split(":")
       backout_hold(event_sku, order_id)
