@@ -21,7 +21,7 @@ def dump(redis, filename="/data/ru101.json", compress=False, match="*"):
       filen = gzip.open(filename, "wb")
     else:
       filen = open(filename, "w")
-    for k in redis.scan_iter(match):
+    for k in redis.scan_iter(match=match, count=1000):
       obj = {}
       t = redis.type(k)
       obj['t'] = t

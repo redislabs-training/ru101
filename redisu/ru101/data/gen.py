@@ -235,7 +235,7 @@ def find_seats(event_sku, tier, qty):
   allocated_seats = []
   total_allocated = 0
   to_allocate = qty
-  for key in redis.scan_iter(create_key_name("seatmap", event_sku, tier, "*")):
+  for key in redis.scan_iter(match=create_key_name("seatmap", event_sku, tier, "*"), count=1000):
     available = redis.bitcount(key)
     if available > 0:
       vals = ["GET", "u32", 0]

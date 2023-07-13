@@ -85,7 +85,7 @@ def print_statistics(stop_event):
   while not stop_event.is_set():
     ts = time.strftime("%H:%M:%S")
     e_key = keynamehelper.create_key_name("event", "*")
-    for event in redis.scan_iter(match=e_key):
+    for event in redis.scan_iter(match=e_key, count=1000):
       (_, event_sku) = event.rsplit(":", 1)
       field_key = keynamehelper.create_field_name(event_sku,
                                                   "total_tickets_sold")

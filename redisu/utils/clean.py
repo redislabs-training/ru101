@@ -15,7 +15,7 @@ def clean_keys(redis_c, prefix=None):
   count = 0
   if key_prefix != None:
     count = 0
-    for k in redis_c.scan_iter(key_prefix + "*"):
+    for k in redis_c.scan_iter(match=key_prefix + "*", count=1000):
       redis_c.delete(k)
       count += 1
   else:
