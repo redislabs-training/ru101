@@ -61,7 +61,7 @@ isc = {'venue': "Tokyo Tatsumi International Swimming Center",
 def create_venue(venue):
   """Create key and geo entry for passed venue"""
   key = keynamehelper.create_key_name("geo", "venues")
-  redis.geoadd(key, venue['geo']['long'], venue['geo']['lat'], venue['venue'])
+  redis.geoadd(key, (venue['geo']['long'], venue['geo']['lat'], venue['venue']))
 
 def test_venue_search():
   """Test 1 - geo searches around a venue"""
@@ -88,7 +88,7 @@ def create_event_locations(venue):
   for i in range(len(venue['events'])):
     event, _ = venue['events'][i]
     key = keynamehelper.create_key_name("geo", "events", event)
-    p.geoadd(key, venue['geo']['long'], venue['geo']['lat'], venue['venue'])
+    p.geoadd(key, (venue['geo']['long'], venue['geo']['lat'], venue['venue']))
   p.execute()
 
 def test_event_search():
@@ -112,7 +112,7 @@ def create_event_transit_locations(venue):
   for i in range(len(venue['transit'])):
     key = keynamehelper.create_key_name("geo", "transits",
                                         venue['transit'][i])
-    p.geoadd(key, venue['geo']['long'], venue['geo']['lat'], venue['venue'])
+    p.geoadd(key, (venue['geo']['long'], venue['geo']['lat'], venue['venue']))
   p.execute()
 
 def test_transit_search():
