@@ -22,7 +22,7 @@ def create_customers(cust_array):
   """Create customer keys from the array of passed customer details"""
   for cust in cust_array:
     c_key = keynamehelper.create_key_name("customer", cust['id'])
-    redis.hmset(c_key, cust)
+    redis.hset(c_key, mapping = cust)
 
 events = [{'sku': "123-ABC-723",
            'name': "Men's 100m Final",
@@ -67,7 +67,7 @@ for number of available tickets, price and ticket tier."""
     if price != None:
       event['price:' + tier] = price
     e_key = keynamehelper.create_key_name("event", event['sku'])
-    redis.hmset(e_key, event)
+    redis.hset(e_key, mapping = event)
     redis.sadd(e_set_key, event['sku'])
 
 # Part One - Check availability and Purchase
@@ -86,7 +86,7 @@ def check_availability_and_purchase(customer, event_sku, qty, tier="General"):
                   'tier': tier, 'qty': qty, 'cost': qty * price,
                   'event_sku': event_sku, 'ts': int(time.time())}
       so_key = keynamehelper.create_key_name("sales_order", order_id)
-      p.hmset(so_key, purchase)
+      p.hset(so_key, mapping = purchase)
       p.execute()
     else:
       print("Insufficient inventory, have {}, requested {}".format(available,
@@ -233,9 +233,9 @@ def create_expired_reservation(event_sku, tier="General"):
            'qty:UZ1EL0': 7, 'tier:UZ1EL0': tier, 'ts:UZ1EL0': int(cur_t - 30)
           }
   k = keynamehelper.create_key_name("ticket_hold", event_sku)
-  redis.hmset(k, holds)
+  redis.hset(k, mapping = holds)
   k = keynamehelper.create_key_name("event", event_sku)
-  redis.hmset(k, tickets)
+  redis.hset(k, mapping = tickets)
 
 def expire_reservation(event_sku, cutoff_time_secs=30):
   """ Check if any reservation has exceeded the cutoff time. If any have, then
