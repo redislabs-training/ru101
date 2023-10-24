@@ -74,7 +74,6 @@ def load(redis, filename="/data/ru101.json", compress=False):
       p.delete(obj['k'])
       if obj['t'] == "hash":
         # Needs to be hset but where's the key here?
-        print(f"k {obj['k']} -> v {obj['v']}")
         p.hset(obj['k'], mapping = obj['v'])
       elif obj['t'] == "set":
         for j in range(len(obj['v'])):
