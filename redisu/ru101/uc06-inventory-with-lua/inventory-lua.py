@@ -209,7 +209,7 @@ class TestLuaScripts(unittest.TestCase):
         keys = []
         for cust in cust_array:
             c_key = keynamehelper.create_key_name("customer", cust['id'])
-            self.redis.hmset(c_key, cust)
+            self.redis.hset(c_key, mapping = cust)
             keys.append(c_key)
         return keys
 
@@ -225,7 +225,7 @@ class TestLuaScripts(unittest.TestCase):
             if price != None:
                 event['price:' + tier] = price
             e_key = keynamehelper.create_key_name("event", event['sku'])
-            self.redis.hmset(e_key, event)
+            self.redis.hset(e_key, mapping = event)
             self.redis.sadd(e_set_key, event['sku'])
             keys.append(e_key)
         return keys
@@ -237,7 +237,7 @@ class TestLuaScripts(unittest.TestCase):
                     'customer_id': customer['id'], 'qty': quantity,
                     'cost':     quantity * float(event['price:General']),
                     'event_sku': event['sku'], 'ts': int(time.time())}
-        self.redis.hmset(purchase_key, purchase)
+        self.redis.hset(purchase_key, mapping = purchase)
         return purchase_key
 
     def creditcard_auth(self, customer, order_total):
