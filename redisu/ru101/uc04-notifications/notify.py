@@ -125,7 +125,7 @@ def test_pub_sub():
                                   args=(stop_event,)))
 
   for i in range(len(threads)):
-    threads[i].setDaemon(True)
+    threads[i].daemon = True
     threads[i].start()
 
   for i in range(15):
@@ -178,7 +178,7 @@ def test_patterned_subs():
                                   args=("sales_order_notify",)))
 
   for i in range(len(threads)):
-    threads[i].setDaemon(True)
+    threads[i].daemon = True
     threads[i].start()
 
   events = ["Mens Boxing", "Womens 4x400",
