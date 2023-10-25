@@ -14,7 +14,7 @@ redis = None
 def create_event(event_sku):
   """Create the event key from the provided details."""
   e_key = keynamehelper.create_key_name("event", event_sku)
-  redis.hmset(e_key, {'sku': event_sku})
+  redis.hset(e_key, mapping = {'sku': event_sku})
 
 def purchase(event_sku):
   """Simple purchase function, that pushes the sales order for publishing"""
@@ -29,7 +29,7 @@ def purchase(event_sku):
 def post_purchases(order_id, s_order):
   """Publish purchases to the queue."""
   so_key = keynamehelper.create_key_name("sales_order", order_id)
-  redis.hmset(so_key, s_order)
+  redis.hset(so_key, mapping = s_order)
   notify_key = keynamehelper.create_key_name("sales_order_notify")
   redis.publish(notify_key, order_id)
   notify_key = keynamehelper.create_key_name("sales_order_notify",
@@ -125,7 +125,7 @@ def test_pub_sub():
                                   args=(stop_event,)))
 
   for i in range(len(threads)):
-    threads[i].setDaemon(True)
+    threads[i].daemon = True
     threads[i].start()
 
   for i in range(15):
@@ -178,7 +178,7 @@ def test_patterned_subs():
                                   args=("sales_order_notify",)))
 
   for i in range(len(threads)):
-    threads[i].setDaemon(True)
+    threads[i].daemon = True
     threads[i].start()
 
   events = ["Mens Boxing", "Womens 4x400",
