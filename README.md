@@ -60,7 +60,7 @@ If you're running Redis Stack locally or via Docker, go ahead and load the data 
 
 ```bash
 $ cd redisu
-$ python utils/dumpload.py load ru101/data/ru101.json
+$ python utils/dumpload.py load ru101/data/ru101.json # `--tls` optional
 ```
 
 If the sample data was loaded correctly, you should see the following message:
