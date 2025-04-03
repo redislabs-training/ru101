@@ -1,3 +1,6 @@
+>[!IMPORTANT]
+>Redis University RU101 is now deprecated and has been replaced with the [Getting started with Redis](https://university.redis.io/learningpath/14q8m6gilfwltm) learning path.
+
 # Redis University RU101: Introduction to Redis Data Structures
 
 ## Introduction
